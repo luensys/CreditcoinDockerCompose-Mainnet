@@ -86,7 +86,7 @@ private:
 
         for (int i = 0; i < (int)digest.size(); i++)
         {
-            byte b = static_cast<byte>(digest.data()[i]);
+            CryptoPP::byte b = static_cast<CryptoPP::byte>(digest.data()[i]);
 
             if (b > 0)
             {
@@ -174,11 +174,11 @@ private:
                 std::string str_nonce = std::to_string(nonce);
 
                 // SHA256 Hashing!!!
-                hash.Update((const byte *)block_id.data(), block_id.size());
-                hash.Update((const byte *)public_key.data(), public_key.size());
-                hash.Update((const byte *)str_nonce.data(), str_nonce.size());
+                hash.Update((const CryptoPP::byte *)block_id.data(), block_id.size());
+                hash.Update((const CryptoPP::byte *)public_key.data(), public_key.size());
+                hash.Update((const CryptoPP::byte *)str_nonce.data(), str_nonce.size());
                 digest.resize(hash.DigestSize());
-                hash.Final((byte *)&digest[0]);
+                hash.Final((CryptoPP::byte *)&digest[0]);
                 // SHA256 Hashing!!!
 
                 int digest_difficulty = count_leading_zeroes(digest);
