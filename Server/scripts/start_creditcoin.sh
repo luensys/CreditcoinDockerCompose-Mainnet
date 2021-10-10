@@ -169,9 +169,18 @@ function install_netcat {
 }
 
 
+function wait_for_network_is_up {
+	while ! (ping -c 1 -W 1 1.2.3.4 | grep -q 'statistics')
+	do
+		sleep 1
+	done
+}
+
 function restart_creditcoin_node {
   local docker_compose
   get_docker_compose_file_name  docker_compose  ||  return 1
+
+  wait_for_network_is_up
 
   local public_ipv4_address=`curl -m 60 https://checkip.amazonaws.com 2>/dev/null`
   [ -z $public_ipv4_address ]  &&  {
