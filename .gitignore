@@ -1,0 +1,9 @@
+Client/clientConfig.json
+Server/.last_block_tip
+Server/check_node_sanity-error.log*
+Server/check_node_sanity.log*
+Server/docker-compose.yaml
+Server/gatewayConfig.json
+Server/hashServer*
+Server/sha256_speed.log
+Server/start_crontab.log
