@@ -7,3 +7,7 @@ Server/gatewayConfig.json
 Server/hashServer*
 Server/sha256_speed.log
 Server/start_crontab.log
+Client/clientConfig.json
+Server/docker-compose.yaml
+Server/gatewayConfig.json
+Server/hashServer
