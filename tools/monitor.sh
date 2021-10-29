@@ -39,12 +39,14 @@ do
 done
 
 
-while [ "$follow" = true ]
+while :
 do
 	timestamp
  	TipBlkNum=$(get_block_tip)
 	Peers=$(get_peers)
 	echo "  $TipBlkNum $Peers"
-	#echo `curl -m 60 http://$REST_API_ENDPOINT/peers 2>/dev/null | grep tcp:// | cut -d \" -f2 | sed 's/^.*\///'`
+	if [ "$follow" = false ]; then
+	  break
+	fi
 	sleep $interval
 done

@@ -36,3 +36,9 @@ docker logs -f sawtooth-validator-default
 ==============================================
 
 
+# NAS Mount
+sudo mount -t nfs 192.168.1.2:/volume1/mining /nas
+
+
+# copy  key pair
+sudo cp /var/lib/docker/volumes/server_validator-key-volume/_data/*
