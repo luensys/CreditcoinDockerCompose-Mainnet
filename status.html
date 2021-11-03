@@ -8,10 +8,16 @@
 </head>
 <body>
 <h2>Happy Mining Status</h2>
+<p><span id="datetime"></span></p>
+
+<script>
+    var dt = new Date();
+    document.getElementById("datetime").innerHTML =  dt.toLocaleString();
+</script>
 <h3>JS1</h3>
 <p><iframe title="JS1" src="https://explorer.creditcoin.org/address/e71441b7d7ef159450a54c3749b05ec81397cb2c22dcba547af22894903e" width="800" height="220"></iframe></p>
 
-<h3>SM1</h3
+<h3>SM1</h3>
 <iframe title="SM1" src="https://explorer.creditcoin.org/address/e2fb925821cb79c838ab00a3d63470ac44c312e58736b3bc436801363ab6"  width="800" height="220"></iframe>
 
 <h3>JY1</h3>
@@ -29,9 +35,25 @@
 <h3>JK1</h3>
 <iframe title="JK1" src="https://explorer.creditcoin.org/address/89db0c0c163fa24971a2d9cc311b5a0e9bee6178a04b0a3790d861024509"  width="800" height="200"></iframe>
 
-<h3>Test</h3>
-<iframe title="Test" src=""  width="100%" height="200"></iframe>
+<h3>JW1</h3>
+<iframe title="JK1" src="https://explorer.creditcoin.org/address/1bde23a25bbecf35386a21de9c4d92cec08f94885b1163ada1695e406240"  width="800" height="200"></iframe>
 
+<h3>AJY1</h3>
+<iframe title="JK1" src="https://explorer.creditcoin.org/address/8065ca24913f2821d82c8335081262ca3871ac11c77a22b828a6abf2ae7a"  width="800" height="200"></iframe>
 
+<h3>HS1</h3>
+<iframe title="JK1" src="https://explorer.creditcoin.org/address/a0620e0223f7748b17e96108d164e6960e81636145c7346f9ede85127bd5"  width="800" height="200"></iframe>
+
+<h3>TEST1</h3> 
+<p><span id="js1_coin"></span></p>
+<script>
+const getCoin = async (sid, addr) => {
+    const response = await fetch('https://api.creditcoinexplorer.com/api/Addresses/'+addr);
+    const myJson = await response.json(); //extract JSON from the http response
+    // do something with myJson
+    document.getElementById(sid).innerHTML = myJson.amount;
+}
+getCoin("js1_coin", "e71441b7d7ef159450a54c3749b05ec81397cb2c22dcba547af22894903e")
+</script>
 </body>
 </html>
