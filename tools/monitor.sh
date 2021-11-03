@@ -41,10 +41,11 @@ done
 
 while :
 do
-	timestamp
+	# timestamp
+	Load=$(uptime)
  	TipBlkNum=$(get_block_tip)
 	Peers=$(get_peers)
-	echo "  $TipBlkNum $Peers"
+	echo " $Load $TipBlkNum $Peers"
 	if [ "$follow" = false ]; then
 	  break
 	fi
