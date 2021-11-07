@@ -301,7 +301,7 @@ function check_sha256_throughput {
 }
 
 
-[ -z $CREDITCOIN_HOME ]  &&  CREDITCOIN_HOME=~/Server
+[ -z $CREDITCOIN_HOME ]  &&  CREDITCOIN_HOME=~/CreditCoin/Server
 echo CREDITCOIN_HOME is $CREDITCOIN_HOME
 cd $CREDITCOIN_HOME  ||  exit 1
 
