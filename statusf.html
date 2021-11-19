@@ -9,7 +9,9 @@
 <body>
 <h2>Happy Mining Status</h2>
 <p><span id="datetime"></span></p>
-<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+
 <script>
     var dt = new Date();
     document.getElementById("datetime").innerHTML =  dt.toLocaleString();
@@ -41,8 +43,8 @@ const getCoin = async (sid, addr) => {
     const myJson = await response.json(); //extract JSON from the http response
     // do something with myJson
     var MinedAmount=numeral(myJson.amount);
-    var NoCoin=MinedAmount.divid(1000000000000000000)
-    document.getElementById(sid).innerHTML =  NoCoin.format('0,0.0')  +  " (" + MinedAmount + ")";
+    var nCoin=MinedAmount.divide(1000000000000000000)
+    document.getElementById(sid).innerHTML =  nCoin.format('0,0')  +  " (" + myJson.amount + ")";
 }
 getCoin("js1_coin", "e71441b7d7ef159450a54c3749b05ec81397cb2c22dcba547af22894903e")
 getCoin("sm1_coin", "e2fb925821cb79c838ab00a3d63470ac44c312e58736b3bc436801363ab6")
