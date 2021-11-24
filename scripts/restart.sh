@@ -5,12 +5,12 @@ date
 echo 'miner down'
 
 docker-compose -f $CREDITCOIN_HOME_UNDER/Client/docker-compose.yaml down
-echo -ne '\n' | $CREDITCOIN_HOME_UNDER/Server/start_creditcoin.sh -s
+echo -ne '\n' | $CREDITCOIN_HOME_UNDER/Server/start_creditcoin_mine.sh -s
 
 date
 echo 'miner up'
 
-echo -ne '\n' | $CREDITCOIN_HOME_UNDER/Server/start_creditcoin.sh
+echo -ne '\n' | $CREDITCOIN_HOME_UNDER/Server/start_creditcoin_mine.sh
 docker-compose -f $CREDITCOIN_HOME_UNDER/Client/docker-compose.yaml up -d
 
 echo '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
