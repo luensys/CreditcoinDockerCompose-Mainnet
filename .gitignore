@@ -11,5 +11,6 @@ Client/clientConfig.json
 Server/docker-compose.yaml
 Server/gatewayConfig.json
 Server/hashServer
+Server/start_creditcoin_mine.sh
 .vscode
 .env
