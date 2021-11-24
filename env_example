@@ -1,0 +1,8 @@
+INFURA="https://mainnet.infura.io/v3/key"
+PRIV_KEY="private_key"
+PUB_KEY="public_key"
+SECRET_KEY="eth_secret_key"
+IP_ADDR="x.x.x.x"
+PORT="8800"
+SNAPSHOT_DIR="~"
+SNAPSHOT_FILE="ccSnapshot-2021.10.16_961837.tar.gz"

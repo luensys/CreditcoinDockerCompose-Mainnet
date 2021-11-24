@@ -17,7 +17,7 @@ You must run build.sh in the ./Server directory.
 I'm using all the cores.
 ![Multithreading](https://user-images.githubusercontent.com/19469291/128811623-c0c66a92-8150-455a-b3a6-e6cd96adb0d3.png)
 
-## add information
+## script queue
 
 ```
 # working dir
@@ -27,9 +27,47 @@ cd ~/work
 # git clone command
 git clone --recursive https://github.com/luensys/CreditcoinDockerCompose-Mainnet.git
 
-# first setup script
+# first setup script (bashrc insert include)
 cd ~/work/CreditcoinDockerCompose-Mainnet/scripts
 ./auto_setup.sh
+
+# env copy
+cd ~/work/CreditcoinDockerCompose-Mainnet
+cp env_example .env
+# and change .env file (ipaddr, port, etc)
+
+# Server Start and Stop
+cd ~/work/CreditcoinDockerCompose-Mainnet/scripts
+./docker_start_and_stop.sh
+
+# -optional- key into .env file
+cd ~/work/CreditcoinDockerCompose-Mainnet/scripts
+./get_key_to_env.sh
+
+# miner configure setup
+cd ~/work/CreditcoinDockerCompose-Mainnet/Server/scripts
+./configure_creditcoin.sh
+# after insert infura url
+
+# gatewayConfig.json file change
+cd ~/work/CreditcoinDockerCompose-Mainnet/scripts
+./gateway_change.sh
+
+# docker-compose ip and port change
+cd ~/work/CreditcoinDockerCompose-Mainnet/scripts
+./docker-compose_change.sh
+
+# -optional- key change
+cd ~/work/CreditcoinDockerCompose-Mainnet/scripts
+./key_change.sh
+
+# clientConfig.json file change
+cd ~/work/CreditcoinDockerCompose-Mainnet/scripts
+./client_change.sh
+
+# snapshot change
+cd ~/work/CreditcoinDockerCompose-Mainnet/scripts
+./snapshot.sh
 
 ```
 
@@ -39,3 +77,5 @@ cd ~/work/CreditcoinDockerCompose-Mainnet/scripts
   -- docker 설치 및 환경 세팅, 멀티테스킹 빌드까지
 - add_crontab.sh
   -- crontab에 30분마다 재시작하는 코드 추가
+
+### 환경 변수

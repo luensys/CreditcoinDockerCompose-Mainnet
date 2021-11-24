@@ -35,6 +35,7 @@ sudo apt install g++-7 -y
 
 # bashrc에 CREDITCOIN_HOME 추가
 ~/work/CreditcoinDockerCompose-Mainnet/scripts/first.sh
+source ~/.bashrc
 
 # 멀티테스킹 빌드
 cd ~/work/CreditcoinDockerCompose-Mainnet/Server
