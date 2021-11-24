@@ -2,7 +2,7 @@
 
 # docker install
 sudo apt-get update
-sudo apt-get install \
+sudo apt-get -y install \
   ca-certificates \
   curl \
   gnupg \
@@ -28,7 +28,7 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 # g++-7 install
 sudo apt-get install -y software-properties-common
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 
 sudo apt update
 sudo apt install g++-7 -y

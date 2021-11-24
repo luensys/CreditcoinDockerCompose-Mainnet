@@ -28,7 +28,8 @@ cd ~/work
 git clone --recursive https://github.com/luensys/CreditcoinDockerCompose-Mainnet.git
 
 # first setup script
-cd ~/work/CreditcoinDockerCompose-Mainnet/scripts/auto_setup.sh
+cd ~/work/CreditcoinDockerCompose-Mainnet/scripts
+./auto_setup.sh
 
 ```
 
