@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $CREDITCOIN_HOME_UNDER/.env
+source ~/.env
 
 docker-compose -f $CREDITCOIN_HOME_UNDER/Server/docker-compose.yaml down
 

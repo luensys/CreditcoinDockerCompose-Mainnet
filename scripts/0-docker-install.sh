@@ -25,21 +25,3 @@ sudo service docker restart
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-
-# g++-7 install
-sudo apt-get install -y software-properties-common
-sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-
-sudo apt update
-sudo apt install g++-7 -y
-
-# bashrc에 CREDITCOIN_HOME 추가
-~/work/CreditcoinDockerCompose-Mainnet/scripts/first.sh
-source ~/.bashrc
-
-# 멀티테스킹 빌드
-cd ~/work/CreditcoinDockerCompose-Mainnet/Server
-./build.sh
-
-# 빌드 후 모든 라이브러리 업그레이드
-sudo apt upgrade -y
